@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    @RenderBody()
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bx-book-reader'></i>
+            <span class="logo_name">VKBook</span>
+        </div>
+        <ul class="nav-links">
+            <li id="Thongke_menu">
+                <a href="./admin.html">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="link_name">Thống kê</span>
+                </a>
+            </li>
+            <li id="danhmuc_menu">
+                <div class="icon-link">
+                    <a href="./admin_danhmuc.html">
+                        <i class='bx bx-collection'></i>
+                        <span class="link_name">Danh mục</span>
+                    </a>
+                </div>
+            </li>
+            <li id="sanpham_menu">
+                <div class="icon-link">
+                    <a href="./admin_sanpham.html">
+                        <i class='bx bx-package'></i>
+                        <span class="link_name">Sản phẩm</span>
+                    </a>
+                </div>
+            </li>
+            <li id="donhang_menu">
+                <div class="icon-link">
+                    <a href="./admin_donhang.html">
+                        <i class='bx bx-receipt'></i>
+                        <span class="link_name">Đơn hàng</span>
+                    </a>
+                </div>
+            </li>
+            <li id="user_menu">
+                <div class="icon-link">
+                    <a href="./admin_user.html">
+                        <i class='bx bx-user'></i>
+                        <span class="link_name">Người dùng</span>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-user-plus'></i>
+                    <span class="link_name">Quyền</span>
+                </a>
+            </li>
+            <li>
+            <div class="profile-details">
+                <div class="profile-content">
+                    <img src="../../css/img/admin.jpg" alt="">
+                </div>
+                <div class="name-job">
+                    <div class="profile_name">Messi</div>
+                    <div class="job">Admin</div>
+                </div>
+                <div class="logout-button"><i class='bx bx-log-out'></i></div>
+            </div>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="home-content">
+            <a class="text" href="admin.html">VKBook Admin</a>
+        </div>
+        <div class="content">
+            <!-- <div class="card">
+                <div id="card-header">
+                    <h4 class="card-title">Thông tin đơn hàng</h4>
+                </div>
+                <div id="card-body">
+                    <div>
+                        <div class="row" style="margin-bottom:40px">
+                            <div class="form-group">
+                                <ul class="info_order">
+                                    <li>
+                                        <label for="info_1">Mã Giao Dịch</label>
+                                        <p class="info_1" id="orderId">1</p>
+                                    </li>
+                                    <li>
+                                        <label for="info_2">Tổng Tiền</label>
+                                        <p class="info_2" id="orderId">200.000</p>
+                                    </li>
+                                    <li>
+                                        <label for="info_3">Mã Sách</label>
+                                        <p class="info_3"id="orderId">1</p>
+                                    </li>
+                                    <li>
+                                        <label for="info_4">Số Lượng</label>
+                                        <p class="info_4">3</p>
+                                    </li>
+                                    <li>
+                                        <label for="info_5">Ngày Mua Hàng</label>
+                                        <p class="info_5">20/12/20121</p>
+                                    </li>
+                                </ul>
+                                <div class="form-group">
+                                    <a href="./admin_donhang.html " class="btn btn-danger ">Trở Về</a>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="card">
+                <div>
+                    <div class="card-header">
+
+                        <h4 style="text-align:center;" class="mb-2">Lịch sử giao dịch</h4>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-bordered">
+                            <thead class="text-primary bg-transparent">
+                                <tr>
+
+                                    <th class="text-center">Mã giao dịch</th>
+                                    <th class="text-center">BookId</th>
+                                    <th class="text-center">Số lượng</th>
+                                    <th class="text-center">Tổng tiền</th>
+                                </tr>
+                            </thead>
+                            <tbody id="contain_order_details_payment">
+                            </tbody>
+                        </table>
+                        <div class="form-group">
+                            <a href="./admin_donhang.html " class="btn btn-danger ">Trở Về</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <script>
+        let arrow = document.querySelectorAll(".arrow");
+        for (var i = 0; i < arrow.length; i++) {
+            arrow[i].addEventListener("click", (e) => {
+                let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
+                arrowParent.classList.toggle("showMenu");
+            });
+        }
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebarBtn);
+        sidebarBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        });
+    </script>  -->
+    <script>
+        window.onload = getDetailOrder();
+    </script>
+</body>
+</html>
