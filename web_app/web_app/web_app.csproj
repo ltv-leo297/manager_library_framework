@@ -6,34 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="NewFolder\**" />
-    <Compile Remove="Views\NewFolder\**" />
-    <Compile Remove="wwwroot\css\NewFolder\**" />
-    <Compile Remove="wwwroot\NewFolder1\**" />
-    <Compile Remove="wwwroot\NewFolder\**" />
-    <Content Remove="NewFolder\**" />
-    <Content Remove="Views\NewFolder\**" />
-    <Content Remove="wwwroot\css\NewFolder\**" />
-    <Content Remove="wwwroot\NewFolder1\**" />
-    <Content Remove="wwwroot\NewFolder\**" />
-    <EmbeddedResource Remove="NewFolder\**" />
-    <EmbeddedResource Remove="Views\NewFolder\**" />
-    <EmbeddedResource Remove="wwwroot\css\NewFolder\**" />
-    <EmbeddedResource Remove="wwwroot\NewFolder1\**" />
-    <EmbeddedResource Remove="wwwroot\NewFolder\**" />
-    <None Remove="NewFolder\**" />
-    <None Remove="Views\NewFolder\**" />
-    <None Remove="wwwroot\css\NewFolder\**" />
-    <None Remove="wwwroot\NewFolder1\**" />
-    <None Remove="wwwroot\NewFolder\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Remove="wwwroot\logoBookStore.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="logoBookStore.png" />
+    <Content Remove="Views\Admin_pages\Index.cshtml" />
+    <Content Remove="Views\Home\Index.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -41,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
+    <Folder Include="Views\User\" />
   </ItemGroup>
 
 </Project>
